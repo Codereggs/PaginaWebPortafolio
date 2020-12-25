@@ -4,8 +4,7 @@
 }
 
 body{
-  margin: 0 auto;
-  position: relative;
+
 }
 
     
@@ -15,7 +14,7 @@ body{
 }
 
 .imagenInicio{
-    background-image: url(imagenes/kodning-.jpg);
+    background-image: url("https://codereggs.tech/homeEGGS/kodning-.jpg");
     background-color: black;
     height: 300px;
     position: relative;
