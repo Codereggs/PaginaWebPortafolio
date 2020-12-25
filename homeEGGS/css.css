@@ -1,0 +1,113 @@
+.iconoPaginaWeb{
+    width:40px;
+    margin-right: 10px;
+}
+
+body{
+  margin: 0 auto;
+  position: relative;
+}
+
+    
+.letraInicio {
+    font-family: 'Quicksand', sans-serif;
+    border-radius:20px;
+}
+
+.imagenInicio{
+    background-image: url(imagenes/kodning-.jpg);
+    background-color: black;
+    height: 300px;
+    position: relative;
+}
+
+#miImagen {
+    background:linear-gradient(#b9ced4 0, #b4c6ca 12.5%, #aebabc 25%, #a5aaaa 37.5%, #9a9696 50%, #8f8283 62.5%, #857376 75%, #7e686d 87.5%, #786067 100%) padding-box,
+    linear-gradient(to right, #b9ced4 0, #b4c6ca 12.5%, #aebabc 25%, #a5aaaa 37.5%, #9a9696 50%, #8f8283 62.5%, #857376 75%, #7e686d 87.5%, #786067 100%) border-box;
+    width:300px;
+    height:auto;
+    border: 5px solid transparent;
+    border-radius:50%;
+    margin-top:10px;
+}
+
+.textoSangrado {
+    text-indent: 50px;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    height:300px;
+}
+
+.containerTecnologias {
+    margin: 0 auto;
+    display:block;
+}
+
+.elementosLista {
+    width:120px;
+
+}
+
+#cssImg{
+    width:150px;
+    position:relative;
+    bottom: 5px;
+}
+
+#htmlImg {
+    position:relative;
+    bottom: 5px;
+}
+
+.elementosLista:focus, .elementosLista:hover {
+    transform: scale(1.5,1.5);
+    transition-duration: 1s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: transform;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: transform;
+    -moz-transition-timing-function: ease;
+    -o-transition-duration: 1s;
+    -o-transition-property: transform;
+    -o-transition-timing-function: ease;
+}
+
+.card:focus, .card:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: 1s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: transform;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: transform;
+    -moz-transition-timing-function: ease;
+    -o-transition-duration: 1s;
+    -o-transition-property: transform;
+    -o-transition-timing-function: ease;
+}
+.cartasPortafolio {
+    width: 18rem;
+}
+
+.my-7 {
+    margin: 70px 0px;
+}
+
+div.row {
+    padding-right:0; !important
+    margin-right:0; !important
+}
+
+footer {
+    height:25px;
+}
