@@ -1,23 +1,56 @@
+
 .iconoPaginaWeb{
     width:40px;
     margin-right: 10px;
 }
-
-body{
-
-}
-
     
 .letraInicio {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     border-radius:20px;
 }
 
+.navbar {
+    opacity: 0.9;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color:#ffffff;
+}
+
+.active {
+    color:#0095cf !important;
+}
+
+.active:hover {
+    color: #daebf2 !important;
+}
+
+
+.texto-inicio {
+    text-shadow: -1px 1px 0px black;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+
+
 .imagenInicio{
     background-image: url("https://codereggs.tech/homeEGGS/kodning-.jpg");
-    background-color: black;
-    height: 300px;
-    position: relative;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    opacity: 0.95;
+    
+}
+
+.circuloLogo {
+    
+    border-radius: 50%;
+    background-color: white;
+    height: 215px;
+    width: 215px;
+    margin: auto;
+    
 }
 
 #miImagen {
@@ -49,7 +82,14 @@ body{
 
 .elementosLista {
     width:120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
+}
+
+.card {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 #cssImg{
@@ -103,10 +143,15 @@ body{
 }
 
 div.row {
-    padding-right:0; !important
-    margin-right:0; !important
+    padding-right:0 !important;
+    margin-right:0 !important;
 }
 
 footer {
     height:25px;
+}
+
+.py-10 {
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
