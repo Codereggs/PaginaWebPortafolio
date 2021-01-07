@@ -140,22 +140,29 @@
   opacity: 0.95;
 }
 
-@media screen and (min-width: 400px) {
+@media (min-width: 400px) and (max-width: 599px) {
   .imagenInicio {
     height: 80vh;
   }
 }
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 999px) {
   .imagenInicio {
     height: 110vh;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 1199px) {
   .imagenInicio {
     height: 130vh;
   }
 }
+
+@media (min-width: 1200px) {
+  .imagenInicio {
+    height: 170vh;
+  }
+}
+
 .logo {
   height: 45vmin;
 }
