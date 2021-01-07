@@ -1,4 +1,102 @@
 
+/* @link https://utopia.fyi/generator-mk-ii?c=320,15,1.2,1140,35,1.25,5,2, */
+
+:root {
+    --fluid-min-width: 320;
+    --fluid-max-width: 1140;
+  
+    --fluid-screen: 100vw;
+    --fluid-bp: calc(
+      (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+        (var(--fluid-max-width) - var(--fluid-min-width))
+    );
+  }
+  
+  @media screen and (min-width: 1140px) {
+    :root {
+      --fluid-screen: calc(var(--fluid-max-width) * 1px);
+    }
+  }
+  
+  :root {
+    --f--2-min: 20;
+    --f--2-max: 22.40;
+    --step--2: calc(
+      ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f--1-min: 12.50;
+    --f--1-max: 28.00;
+    --step--1: calc(
+      ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f-0-min: 50.00;
+    --f-0-max: 100.00;
+    --step-0: calc(
+      ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f-1-min: 18.00;
+    --f-1-max: 43.75;
+    --step-1: calc(
+      ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f-2-min: 21.60;
+    --f-2-max: 54.69;
+    --step-2: calc(
+      ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f-3-min: 16;
+    --f-3-max: 25;
+    --step-3: calc(
+      ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f-4-min: 31.10;
+    --f-4-max: 85.45;
+    --step-4: calc(
+      ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+        var(--fluid-bp)
+    );
+  
+    --f-5-min: 37.32;
+    --f-5-max: 106.81;
+    --step-5: calc(
+      ((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-6-min: 37.32;
+    --f-6-max: 110;
+    --step-6: calc(
+      ((var(--f-6-min) / 16) * 1rem) + (var(--f-6-max) - var(--f-6-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-elemento1-min: 86;
+    --f-elemento1-max: 106.81;
+    --step-elemento1: calc(
+      ((var(--f-elemento1-min) / 16) * 1rem) + (var(--f-elemento1-max) - var(--f-elemento1-min)) *
+        var(--fluid-bp)
+    );
+
+    --f-elemento2-min: 95;
+    --f-elemento2-max: 110;
+    --step-elemento2: calc(
+      ((var(--f-elemento2-min) / 16) * 1rem) + (var(--f-elemento2-max) - var(--f-elemento2-min)) *
+        var(--fluid-bp)
+    );
+  }
+/*********************************************************************/
 .iconoPaginaWeb{
     width:40px;
     margin-right: 10px;
@@ -29,6 +127,9 @@
 .texto-inicio {
     text-shadow: -1px 1px 0px black;
     font-family: 'Josefin Sans', sans-serif !important;
+    font-size: var(--step-5);
+    line-height: 1em;
+    
 }
 
 
@@ -38,35 +139,78 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 500px;
+    background-size: cover;
+    min-height: 50vh;
+    height: 70vh;
     opacity: 0.95;
     
+}
+
+@media screen and (min-width: 400px) {
+ .imagenInicio {
+    height: 80vh;
+
+ }
+}
+ @media screen and (min-width: 600px) {
+    .imagenInicio {
+       height: 110vh;
+   
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .imagenInicio {
+       height: 130vh;
+   
+    }
+}
+.logo {
+    height: 45vmin;
+}
+
+
+.container-logo {
+    max-height:500px;
+    display: block;
+    padding-bottom: 20vh;
 }
 
 .circuloLogo {
     
     border-radius: 50%;
     background-color: white;
-    height: 215px;
-    width: 215px;
+    height: auto;
+    width: calc(var(--step-4)*3);
     margin: auto;
     
 }
 
+div .circuloLogo img{
+    width:90%;
+}
 #miImagen {
     background:linear-gradient(#b9ced4 0, #b4c6ca 12.5%, #aebabc 25%, #a5aaaa 37.5%, #9a9696 50%, #8f8283 62.5%, #857376 75%, #7e686d 87.5%, #786067 100%) padding-box,
     linear-gradient(to right, #b9ced4 0, #b4c6ca 12.5%, #aebabc 25%, #a5aaaa 37.5%, #9a9696 50%, #8f8283 62.5%, #857376 75%, #7e686d 87.5%, #786067 100%) border-box;
-    width:300px;
+    width:90%;
     height:auto;
     border: 5px solid transparent;
     border-radius:50%;
     margin-top:10px;
 }
 
-.textoSangrado {
-    text-indent: 50px;
+.botonCV {
+    border-radius:8%;
+    font-size: var(--step--2);
 }
 
+.textoSangrado {
+    text-indent: var(--step--1);
+}
+
+.lead {
+    font-size: var(--step-3);
+}
 
 .flex-container {
     display: flex;
@@ -81,7 +225,14 @@
 }
 
 .elementosLista {
-    width:120px;
+    width: calc(var(--step-elemento1)*1.3);
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.elementosLista2 {
+    width: calc(var(--step-elemento1)*1.2);
     margin-top: 30px;
     margin-bottom: 30px;
 
@@ -93,17 +244,34 @@
 }
 
 #cssImg{
-    width:150px;
+    width: calc(var(--step-elemento2)*1.5);
     position:relative;
     bottom: 5px;
 }
 
 #htmlImg {
+    width: calc(var(--step-elemento1)*1.2);
     position:relative;
     bottom: 5px;
 }
 
 .elementosLista:focus, .elementosLista:hover {
+    transform: scale(1.5,1.5);
+    transition-duration: 1s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: transform;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-duration: 1s;
+    -moz-transition-property: transform;
+    -moz-transition-timing-function: ease;
+    -o-transition-duration: 1s;
+    -o-transition-property: transform;
+    -o-transition-timing-function: ease;
+}
+
+.elementosLista2:focus, .elementosLista2:hover {
     transform: scale(1.5,1.5);
     transition-duration: 1s;
     transition-property: transform;
@@ -155,3 +323,8 @@ footer {
     padding-top: 150px;
     padding-bottom: 150px;
 }
+
+.display-3{
+    font-size: var(--step-0) !important;
+}
+
