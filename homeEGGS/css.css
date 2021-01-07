@@ -136,7 +136,7 @@
   background-attachment: fixed;
   background-size: cover;
   min-height: 50vh;
-  height: 70vh;
+  height: auto;
   opacity: 0.95;
 }
 
@@ -147,21 +147,10 @@
 }
 @media (min-width: 600px) and (max-width: 999px) {
   .imagenInicio {
-    height: 110vh;
+    height: 100vh;
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1199px) {
-  .imagenInicio {
-    height: 130vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  .imagenInicio {
-    height: 170vh;
-  }
-}
 
 .logo {
   height: 45vmin;
