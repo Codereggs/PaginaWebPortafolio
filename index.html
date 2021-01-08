@@ -60,21 +60,33 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#inicio"
+              <a
+                class="nav-link nav-cerrar active"
+                aria-current="page"
+                href="#inicio"
+                id="nav-inicio"
                 >Inicio</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#quienSoy">¿Quien soy?</a>
+              <a class="nav-link" href="#quienSoy" id="nav-quienSoy"
+                >¿Quien soy?</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#tecnologias">Tecnologías</a>
+              <a class="nav-link" href="#tecnologias" id="nav-tecnologias"
+                >Tecnologías</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portafolio">Portafolio</a>
+              <a class="nav-link" href="#portafolio" id="nav-portafolio"
+                >Portafolio</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contactame">Contáctame</a>
+              <a class="nav-link" href="#contactame" id="nav-contactame"
+                >Contáctame</a
+              >
             </li>
           </ul>
         </div>
@@ -221,6 +233,12 @@
                 target="_blank"
                 >Link al repositorio</a
               >
+              <a
+                href="https://mrgarsan.github.io/AcordionJS/"
+                class="btn btn-primary m-3"
+                target="_blank"
+                >Link a la página web</a
+              >
             </div>
           </div>
         </div>
@@ -243,6 +261,12 @@
                 target="_blank"
                 >Link al repositorio</a
               >
+              <a
+                href="https://mrgarsan.github.io/FormularioJquery/"
+                class="btn btn-primary m-3"
+                target="_blank"
+                >Link a la página web</a
+              >
             </div>
           </div>
         </div>
@@ -264,6 +288,12 @@
                 class="btn btn-primary"
                 target="_blank"
                 >Link al repositorio</a
+              >
+              <a
+                href="https://mrgarsan.github.io/ReproductorCodigo/"
+                class="btn btn-primary m-3"
+                target="_blank"
+                >Link a la página web</a
               >
             </div>
           </div>
@@ -387,10 +417,80 @@
     ></script>
 
     <script type="text/javascript">
+      // Activar tooltips
       let tooltipos = function () {
         $('[data-toggle="tooltip"]').tooltip();
       };
       tooltipos();
+
+      // Colapso de pantalla para cuando se reduzca el menu de navegación.
+      // Activar colapso en elementos del nav cuando se genere un click dependiendo del ancho de la pantalla del navegador.
+
+      let anchoPantalla = screen.width;
+      let linkInicio = document.querySelector("#nav-inicio");
+      let linkQuienSoy = document.querySelector("#nav-quienSoy");
+      let linkTecnologias = document.querySelector("#nav-tecnologias");
+      let linkPortafolio = document.querySelector("#nav-portafolio");
+      let linkContacto = document.querySelector("#nav-contactame");
+
+      if (anchoPantalla < 992) {
+        //Inicio
+
+        linkInicio.setAttribute("data-toggle", "collapse");
+        linkInicio.setAttribute("data-target", "#navbarSupportedContent");
+        linkInicio.addEventListener("click", function () {
+          window.location.href = "#inicio";
+        });
+
+        //Quien Soy
+        linkQuienSoy.setAttribute("data-toggle", "collapse");
+        linkQuienSoy.setAttribute("data-target", "#navbarSupportedContent");
+        linkQuienSoy.addEventListener("click", function () {
+          window.location.href = "#quienSoy";
+        });
+
+        //Tecnologias
+        linkTecnologias.setAttribute("data-toggle", "collapse");
+        linkTecnologias.setAttribute("data-target", "#navbarSupportedContent");
+        linkTecnologias.addEventListener("click", function () {
+          window.location.href = "#tecnologias";
+        });
+
+        //Portafolio
+        linkPortafolio.setAttribute("data-toggle", "collapse");
+        linkPortafolio.setAttribute("data-target", "#navbarSupportedContent");
+        linkPortafolio.addEventListener("click", function () {
+          window.location.href = "#portafolio";
+        });
+
+        //Contactame
+        linkContacto.setAttribute("data-toggle", "collapse");
+        linkContacto.setAttribute("data-target", "#navbarSupportedContent");
+        linkContacto.addEventListener("click", function () {
+          window.location.href = "#contactame";
+        });
+      } else if (anchoPantalla > 992) {
+        linkInicio,
+          linkContacto,
+          linkPortafolio,
+          linkQuienSoy,
+          linkTecnologias.removeAttribute("data-toggle");
+        linkInicio,
+          linkContacto,
+          linkPortafolio,
+          linkQuienSoy,
+          linkTecnologias.removeAttribute("data-target");
+      }
+
+      //Mensaje al dar click al boton del CV
+
+      let mensaje = `Gracias por descargar mi CV.
+En instantes comenzará la descarga.`;
+      let botonCurriculum = document.querySelector(".botonCV");
+
+      botonCurriculum.addEventListener("click", function () {
+        alert(mensaje);
+      });
     </script>
   </body>
 </html>
